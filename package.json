@@ -1,0 +1,23 @@
+{
+  "name": "react-static-view",
+  "version": "1.0.3",
+  "description": "react-static-view is static component.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "static",
+    "static-view",
+    "react-static-view",
+    "static-component"
+  ],
+  "author": "lizhooh",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
