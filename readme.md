@@ -3,6 +3,8 @@
 ### react-static-view
 react-static-view is a static component container.
 
+<a href="https://www.npmjs.com/package/react-static-view"><img src="https://img.shields.io/npm/v/react-static-view.svg?style=flat-square"></a>
+<a href="https://www.npmjs.com/package/react-static-view"><img src="https://img.shields.io/npm/dm/react-static-view.svg?style=flat-square"></a>
 
 ### install
 
