@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+function isPropsType(p) {
+    return !(typeof p === 'number' || typeof p === 'boolean' || Array.isArray(p));
+}
+
 /**
  * @param{Number|Boolean|Array} render
  */
@@ -11,12 +15,24 @@ export default class StaticView extends Component {
 
     constructor(props) {
         super(props);
-        this._render = this.props.render || 1;
-        this.renderCount = 0;   // 计数器
+        if (isPropsType(this.props.render)) {
+            console.warn('TypeError: react-static-view props render is not a number or boolean or array');
+            this._render = 1;
+        }
+        else {
+            this._render = this.props.render;
+        }
+        this.renderCount = 0;
     }
 
     componentWillReceiveProps(nextProps) {
-        this._render = nextProps.render;
+        if (isPropsType(nextProps.render)) {
+            console.warn('TypeError: react-static-view props render is not a number or boolean or array');
+            this._render = 1;
+        }
+        else {
+            this._render = nextProps.render;
+        }
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -48,6 +64,8 @@ export default class StaticView extends Component {
 
     render() {
         const { children = null, render, ...props } = this.props;
+        if (this._render === false) return null;
+
         return (
             <div {...props}>
                 {children}

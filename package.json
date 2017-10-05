@@ -1,6 +1,6 @@
 {
   "name": "react-static-view",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react-static-view is static component.",
   "main": "index.js",
   "scripts": {

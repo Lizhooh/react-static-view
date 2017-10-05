@@ -1,10 +1,12 @@
 
-
 ### react-static-view
 react-static-view is a static component container.
 
 <a href="https://www.npmjs.com/package/react-static-view"><img src="https://img.shields.io/npm/v/react-static-view.svg?style=flat-square"></a>
 <a href="https://www.npmjs.com/package/react-static-view"><img src="https://img.shields.io/npm/dm/react-static-view.svg?style=flat-square"></a>
+
+In react is default used `<div>` .
+In react native is default used `<view>`.
 
 ### install
 
@@ -17,7 +19,7 @@ npm install --save react-static-view
 ```js
 import StaticView from 'react-static-view';
 
-// render only once
+// render only once [default]
 <StaticView render={1} />
 
 // render only two
@@ -38,3 +40,4 @@ import StaticView from 'react-static-view';
 ```js
 import StaticView from 'react-static-view/react-native';
 ```
+
