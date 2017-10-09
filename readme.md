@@ -14,6 +14,18 @@ In react native is default used `<view>`.
 npm install --save react-static-view
 ```
 
+### Use in React
+
+```js
+import StaticView from 'react-static-view';
+```
+
+### Use in React Native
+
+```js
+import StaticView from 'react-static-view/react-native';
+```
+
 ### use
 
 ```js
@@ -28,16 +40,42 @@ import StaticView from 'react-static-view';
 // render only at 1, 2, 5, 9
 <StaticView render={[1, 2, 5, 9]} />
 
-// not render
+// not render => return null
 <StaticView render={false} />
 
 // render forever
 <StaticView render={true} />
 ```
 
-### In React Native
+Except for `render` and `element`, all else can be added.
+
+In react is default used `<div>` .
+In react native is default used `<view>`.
+
+You can specify the container type using `element`.
 
 ```js
-import StaticView from 'react-static-view/react-native';
+// react, use dom string name
+<StaticView element='header' style={styles.header}>
+    <span>Hello</span>
+<StaticView />
+/* after render ==>
+<header style={styles.header}>
+    <span>Hello</span>
+</header>
+*/
+
+
+
+// react-native, use component object
+<StaticView element={TouchableOpacity} style={styles.touch}>
+    <Text>Hello</Text>
+</StaticView>
+/* after render ==>
+<TouchableOpacity style={styles.touch}>
+    <Text>Hello</Text>
+</TouchableOpacity>
+*/
 ```
+
 

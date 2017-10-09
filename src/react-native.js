@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
+// check type
 function isPropsType(p) {
     return !(typeof p === 'number' || typeof p === 'boolean' || Array.isArray(p));
 }
@@ -12,6 +13,7 @@ export default class StaticView extends Component {
 
     static defaultProps = {
         render: 1,
+        element: View,
     }
 
     constructor(props) {
@@ -64,13 +66,9 @@ export default class StaticView extends Component {
     }
 
     render() {
-        const { children = null, render, ...props } = this.props;
+        const { children = null, render, element, ...props } = this.props;
         if (this._render === false) return null;
 
-        return (
-            <View {...props}>
-                {children}
-            </View>
-        );
+        return React.createElement(element, props, children);
     }
 }
