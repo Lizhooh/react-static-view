@@ -67,7 +67,9 @@ export default class StaticView extends Component {
     render() {
         const { children = null, render, element, ...props } = this.props;
         if (this._render === false) return null;
-
+        if (element === null) {
+            return children;
+        }
         return React.createElement(element, props, children);
     }
 }
