@@ -32,22 +32,22 @@ import StaticView from 'react-static-view/react-native';
 import StaticView from 'react-static-view';
 
 // render only once [default]
-<StaticView render={1} />
+<StaticView rendered={1} />
 
 // render only two
-<StaticView render={2} />
+<StaticView rendered={2} />
 
 // render only at 1, 2, 5, 9
-<StaticView render={[1, 2, 5, 9]} />
+<StaticView rendered={[1, 2, 5, 9]} />
 
 // not render => return null
-<StaticView render={false} />
+<StaticView rendered={false} />
 
 // render forever
-<StaticView render={true} />
+<StaticView rendered={true} />
 ```
 
-Except for `render` and `element`, all else can be added.
+Except for `rendered` and `element`, all else can be added.
 
 In react is default used `<div>` .
 In react native is default used `<view>`.
@@ -64,8 +64,6 @@ You can specify the container type using `element`.
     <span>Hello</span>
 </header>
 */
-
-
 
 // react-native, use component object
 <StaticView element={TouchableOpacity} style={styles.touch}>
