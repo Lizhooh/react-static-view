@@ -14,18 +14,6 @@ In react native is default used `<view>`.
 npm install --save react-static-view
 ```
 
-### Use in React
-
-```js
-import StaticView from 'react-static-view';
-```
-
-### Use in React Native
-
-```js
-import StaticView from 'react-static-view/react-native';
-```
-
 ### use
 
 ```js
@@ -47,10 +35,7 @@ import StaticView from 'react-static-view';
 <StaticView rendered={true} />
 ```
 
-Except for `rendered` and `element`, all else can be added.
-
-In react is default used `<div>` .
-In react native is default used `<view>`.
+Except for `rendered` and `element`, all else can be added. `element` default is `null`.
 
 You can specify the container type using `element`.
 
@@ -75,5 +60,7 @@ You can specify the container type using `element`.
 </TouchableOpacity>
 */
 ```
+
+
 
 
