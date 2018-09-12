@@ -1,2 +1,6 @@
 lib
 node_modules
+/test/node_modules
+/test/.cache
+/test/dist
+
